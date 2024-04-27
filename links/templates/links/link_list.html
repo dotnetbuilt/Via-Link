@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Link List
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Links</h1>
+        
+        {% for link in links %}
+            <article class="post">
+                <p>title: {{ link.title }}</p>
+                <p>content: {{ link.content }}</p>
+                <p>created at: {{ link.created_at }}</p>
+                <p>updated at: {{ link.updated_at }}</p>
+            </article>
+        {% endfor %}
+            
+    </section>
+{% endblock %}
