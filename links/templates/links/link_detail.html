@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Link Detail
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Detail</h1>
+        <article class="post">
+            <p>title: {{ link.title }}</p>
+            <p>content: {{ link.content }}</p>
+            <p>created at: {{ link.created_at }}</p>
+            <p>updated at: {{ link.updated_at }}</p>
+        </article>
+    </section>
+{% endblock %}

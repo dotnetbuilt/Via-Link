@@ -6,14 +6,16 @@
 
 {% block content %}
     <section>
-        <h1>Links</h1>
+        <h1>List</h1>
         
         {% for link in links %}
             <article class="post">
-                <p>title: {{ link.title }}</p>
-                <p>content: {{ link.content }}</p>
-                <p>created at: {{ link.created_at }}</p>
-                <p>updated at: {{ link.updated_at }}</p>
+                <a href="{% url 'links:detail' link.pk %}">
+                    <p>title: {{ link.title }}</p>
+                    <p>content: {{ link.content }}</p>
+                    <p>created at: {{ link.created_at }}</p>
+                    <p>updated at: {{ link.updated_at }}</p>
+                </a>
             </article>
         {% endfor %}
             
