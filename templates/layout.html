@@ -13,9 +13,9 @@
 </head>
 <body>
     <nav>
-        <a href="{% url 'links:list' %}">Lists</a> 
-        {% comment %} {% if user.is_authenticated %}  
-            <a href="{% url 'links:new-post' %}">New link</a> |
+        <a href="{% url 'links:list' %}">Lists</a> |
+        {% if user.is_authenticated %}  
+            <a href="{% url 'links:new-link' %}">New link</a> | 
             <form class="logout" action="{% url 'accounts:logout' %}" method="post">
                 {% csrf_token %}
                 <button class="logout-button">Logout</button>
@@ -23,7 +23,7 @@
         {% else %}
             <a href="{% url 'accounts:register' %}">Registration</a> |
             <a href="{% url 'accounts:login' %}">Login</a> 
-        {% endif %} {% endcomment %}
+        {% endif %} 
     </nav>
 
     <main>
