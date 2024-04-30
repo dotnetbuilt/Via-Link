@@ -9,6 +9,7 @@
         <h1>List</h1>
         
         {% for link in links %}
+            <hr>
             <article class="post">
                 <a href="{% url 'links:detail' link.pk %}">
                     <p>title: {{ link.title }}</p>
